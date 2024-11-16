@@ -1,45 +1,106 @@
 /* css/styles.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #f9f9f9;
+    --text-color: #333;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-nav {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
+.session-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
-nav ul {
-    list-style: none;
+.scripture-box {
+    background: #f8f9fa;
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.activity-section {
+    background: #e8f4f8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.reflection-prompt {
+    background: #fff3e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.navigation {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    margin: 2rem 0;
 }
 
-nav a {
+.nav-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
     text-decoration: none;
-    color: #333;
-    padding: 10px;
-    display: block;
     transition: background-color 0.3s;
 }
 
-nav a:hover {
-    background-color: #ddd;
-    border-radius: 3px;
+.nav-button:hover {
+    background-color: #2980b9;
+}
+
+/* Interactive Elements */
+.interactive-box {
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.note-taking-area {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .session-content {
+        padding: 1rem;
+    }
 }
